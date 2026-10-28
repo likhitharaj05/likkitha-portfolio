@@ -203,7 +203,7 @@ function App() {
           <p className="contact-email-note"><a href="mailto:vlakshmilikhitha05@gmail.com">vlakshmilikhitha05@gmail.com</a></p>
         </section>
       </main>
-      <footer className="site-footer section-wrap"><a className="brand" href="#home"><span className="brand-mark">L</span><span>likhitha<span className="brand-dot">.</span></span></a><a href="#home" className="back-top">Back to top ↑</a></footer>
+      <footer className="site-footer section-wrap"><a className="brand" href="#home"><span className="brand-mark">L</span><span>likhitha<span className="brand-dot">.</span></span></a><a href="#home" className="back-top">Return to top ↑</a></footer>
     </div>
   )
 }
