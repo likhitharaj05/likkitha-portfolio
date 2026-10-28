@@ -1,72 +1,150 @@
 # Likhitha's Developer Portfolio
 
-A responsive, animated personal portfolio built with React and Vite. It uses a dark navy theme, custom CSS illustrations, responsive navigation, project cards, and scroll-reveal animations.
+A responsive, animated personal portfolio built with **React and Vite**. It features a dark navy theme, responsive navigation, project showcases, skills, experience, contact links, and scroll-reveal animations.
+
+## Tech Stack
+
+- React.js
+- Vite
+- JavaScript
+- HTML5
+- CSS3
+- Git and GitHub
+- GitHub Pages
 
 ## Requirements
 
-- Node.js 18+ (Node.js 20 LTS recommended)
+- Node.js 18 or later
 - npm
+- Git
 - A GitHub account
 
-## Run locally
+## Run Locally
 
-1. Extract the ZIP file.
-2. Open the extracted folder in VS Code.
-3. In the terminal, run:
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/likhitharaj05/likkitha-portfolio.git
+   ```
+
+2. Open the project folder in VS Code:
+
+   ```bash
+   cd likkitha-portfolio
+   ```
+
+3. Install dependencies:
 
    ```bash
    npm install
+   ```
+
+4. Start the development server:
+
+   ```bash
    npm run dev
    ```
 
-4. Open the local URL printed by Vite (usually `http://localhost:5173`).
+5. Open the local URL displayed in the terminal, usually `http://localhost:5173`.
 
-## Personalize before publishing
+## Personalization
 
-Edit `src/App.jsx`:
+Before publishing, review the following files:
 
-- Check the project descriptions and technology tags for accuracy.
-- Add real GitHub repository/demo URLs to each project's `link` value.
-- Add a professional email address in the contact section once you decide which address to publish.
-- Confirm experience dates and wording.
-- Remove any skills you do not want to claim.
+- **`src/App.jsx`** — Update your profile details, skills, project descriptions, experience, and contact information.
+- **`src/styles.css`** — Customize the portfolio's design, colors, layout, and animations.
+- **`index.html`** — Update the browser tab title and page description.
+- **`vite.config.js`** — Ensure the base path matches your GitHub repository.
 
-Edit `index.html` to adjust the page title and description if desired.
+Verify all project descriptions, technologies, experience dates, and contact information before publishing.
+
+## Push Updates to GitHub
+
+From the project folder, run:
+
+```bash
+git add .
+git commit -m "Update developer portfolio"
+git push origin main
+```
+
+If this is the first commit, use:
+
+```bash
+git add .
+git commit -m "Add developer portfolio"
+git branch -M main
+git remote add origin https://github.com/likhitharaj05/likkitha-portfolio.git
+git push -u origin main
+```
+
+If the remote already exists, do not add it again. Check it using:
+
+```bash
+git remote -v
+```
 
 ## Deploy to GitHub Pages
 
-1. Create a **public** GitHub repository named `likkitha-portfolio` (or choose another name).
-2. Update `base` in `vite.config.js` to match the repository name, including the slashes:
-   - Repository `likkitha-portfolio`: `base: '/likkitha-portfolio/'`
-   - Repository `your-repo`: `base: '/your-repo/'`
-   - If using a user site repository named `YOUR-USERNAME.github.io`, set `base: '/'`.
-3. Push this project to the repository:
+### 1. Configure Vite
 
-   ```bash
-   git init
-   git add .
-   git commit -m "Build developer portfolio"
-   git branch -M main
-   git remote add origin https://github.com/YOUR-USERNAME/likkitha-portfolio.git
-   git push -u origin main
-   ```
+In `vite.config.js`, ensure the base path is:
 
-4. Install dependencies and deploy:
+```javascript
+base: '/likkitha-portfolio/',
+```
 
-   ```bash
-   npm install
-   npm run deploy
-   ```
+### 2. Install the deployment dependency
 
-5. In GitHub, open **Settings → Pages** and choose the `gh-pages` branch as the deployment source if GitHub Pages has not already detected it.
-6. Wait for the GitHub Pages workflow/deployment to finish. Your live URL will typically be:
-   `https://YOUR-USERNAME.github.io/likkitha-portfolio/`
+```bash
+npm install
+npm install --save-dev gh-pages
+```
 
-Replace `YOUR-USERNAME` and the repository name with your actual values. The live site will not exist until you complete these steps.
+Ensure your `package.json` includes these scripts:
 
-## Notes
+```json
+"predeploy": "npm run build",
+"deploy": "gh-pages -d dist"
+```
 
-- The project uses illustrative CSS art rather than fake screenshots of your applications.
-- Project repository links are intentionally blank until you provide the real URLs.
-- Google Fonts are loaded from Google Fonts when online; the site uses fallback fonts if unavailable.
-- No contact form is connected to an email service; the contact area links to your GitHub and LinkedIn profiles.
+Keep the existing `dev`, `build`, and `preview` scripts.
+
+### 3. Deploy
+
+```bash
+npm run deploy
+```
+
+### 4. Enable GitHub Pages
+
+1. Open the [likkitha-portfolio repository](https://github.com/likhitharaj05/likkitha-portfolio).
+2. Go to **Settings → Pages**.
+3. Select **Deploy from a branch** as the source.
+4. Select the `gh-pages` branch and the `/ (root)` folder.
+5. Save and wait for deployment to complete.
+
+### Live Portfolio
+
+Once deployment succeeds, your website should be available at:
+
+**https://likhitharaj05.github.io/likkitha-portfolio/**
+
+The URL will work after GitHub Pages has successfully published the site.
+
+## Important Notes
+
+- Add actual GitHub repository or live demo links for your projects when available.
+- Ensure your published email address is correct.
+- Do not include passwords, access tokens, or other secrets in the repository.
+- The contact section does not send messages unless an email service or backend is connected.
+- Google Fonts require an internet connection; fallback fonts are provided.
+- After making changes, push your updates to GitHub and redeploy if necessary.
+
+---
+
+**Created by Lakshmi Likhitha Vasamsetti**
+
+GitHub: https://github.com/likhitharaj05
+
+LinkedIn: https://www.linkedin.com/in/likhitha-vasamsetti/
